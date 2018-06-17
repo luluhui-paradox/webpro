@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Login from '@/components/Login'
 import Regedit from '@/components/Regedit'
 import GetPassword from '@/components/GetPassword'
+import MainView from '@/components/MainView'
 Vue.use(Router)
 
 export default new Router({
@@ -24,7 +25,12 @@ export default new Router({
     },
     {
       path:'/',
-      redirect:'/Login'
+      redirect:'/Main'
+    },
+    {
+      path:'/Main',
+      name:'MainView',
+      component:MainView
     }
   ]
 })
