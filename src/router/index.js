@@ -5,6 +5,7 @@ import Regedit from '@/components/Regedit'
 import GetPassword from '@/components/GetPassword'
 import MainView from '@/components/MainView'
 import UserInformationView from '@/components/MainView'
+import InvigilateInfoView from  '@/components/InvigilateInfoView'
 Vue.use(Router)
 
 export default new Router({
@@ -37,6 +38,12 @@ export default new Router({
           path:'/Main/UserInfo',
           name:'UserInformationView',
           component:UserInformationView
+        },
+        {
+          path:'/Main/InvigilateInfoView',
+          name:'InvigilateInfoView',
+          component:InvigilateInfoView
+
         }
       ]
     },

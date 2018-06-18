@@ -16,7 +16,7 @@
     </el-header>
       <!--组件-->
       <el-main>
-         <UserInformationView></UserInformationView>
+        <InvigilateInfoView></InvigilateInfoView>
       </el-main>
     </el-container>
   </div>
@@ -25,9 +25,10 @@
 <script>
     import Regedit from "./Regedit";
     import UserInformationView from "./UserInformationView";
+    import InvigilateInfoView from "./InvigilateInfoView";
     export default {
         name: "MainView",
-      components: {UserInformationView, Regedit}
+      components: {InvigilateInfoView,Regedit}
     }
 </script>
 
