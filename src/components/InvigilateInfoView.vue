@@ -2,9 +2,10 @@
   <div align="center">
     <!--显示监考信息-->
   <el-table
+    @row-click='rows(row,event,column)'
     :data="tableData5"
     style="width: 50%">
-    <el-table-column type="expand">
+    <el-table-column type="expand" >
       <template slot-scope="props">
         <el-form label-position="left" inline class="demo-table-expand">
           <el-form-item label="考试名称">
@@ -83,8 +84,13 @@
             examPostion: '上海市普陀区真北路',
           }]
         }
+      },
+      methods : {
+          //单元行点击方法
+        rows(row,event,column){
+          ;
+        }
       }
-
     }
 </script>
 
