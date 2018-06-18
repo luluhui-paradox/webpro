@@ -16,15 +16,18 @@
     </el-header>
       <!--组件-->
       <el-main>
-         <router-view></router-view>
+         <UserInformationView></UserInformationView>
       </el-main>
     </el-container>
   </div>
 </template>
 
 <script>
+    import Regedit from "./Regedit";
+    import UserInformationView from "./UserInformationView";
     export default {
-        name: "MainView"
+        name: "MainView",
+      components: {UserInformationView, Regedit}
     }
 </script>
 

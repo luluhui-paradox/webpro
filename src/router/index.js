@@ -4,6 +4,7 @@ import Login from '@/components/Login'
 import Regedit from '@/components/Regedit'
 import GetPassword from '@/components/GetPassword'
 import MainView from '@/components/MainView'
+import UserInformationView from '@/components/MainView'
 Vue.use(Router)
 
 export default new Router({
@@ -30,7 +31,15 @@ export default new Router({
     {
       path:'/Main',
       name:'MainView',
-      component:MainView
-    }
+      component:MainView,
+      children:[
+        {
+          path:'/Main/UserInfo',
+          name:'UserInformationView',
+          component:UserInformationView
+        }
+      ]
+    },
+
   ]
 })
