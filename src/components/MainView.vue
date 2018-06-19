@@ -14,6 +14,10 @@
     <el-menu-item index="3">模块3</el-menu-item>
     </el-menu>
     </el-header>
+      <el-aside>
+        <!--组件-->
+        <UserPanal></UserPanal>
+      </el-aside>
       <!--组件-->
       <el-main>
         <InvigilateInfoView></InvigilateInfoView>
@@ -26,6 +30,7 @@
     import Regedit from "./Regedit";
     import UserInformationView from "./UserInformationView";
     import InvigilateInfoView from "./InvigilateInfoView";
+
     export default {
         name: "MainView",
       components: {InvigilateInfoView,Regedit}

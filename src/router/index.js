@@ -6,6 +6,7 @@ import GetPassword from '@/components/GetPassword'
 import MainView from '@/components/MainView'
 import UserInformationView from '@/components/MainView'
 import InvigilateInfoView from  '@/components/InvigilateInfoView'
+import testVue from '@/components/testVue'
 Vue.use(Router)
 
 export default new Router({
@@ -47,6 +48,11 @@ export default new Router({
         }
       ]
     },
+    {
+      path:'/testVue',
+      name:'testVue',
+      component:testVue
+    }
 
   ]
 })
