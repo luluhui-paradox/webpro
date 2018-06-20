@@ -19,7 +19,7 @@
           </el-form-item>
           <!--手机号-->
           <el-form-item label="手机号" prop="mobileNumber">
-            <el-input type="number" v-model="ruleForm.mobileNumber" maxlength=11 ></el-input>
+            <el-input v-model="ruleForm.mobileNumber" maxlength=11 ></el-input>
           </el-form-item>
           <!--邮箱-->
           <el-form-item label="邮箱" prop="eMail">
@@ -96,13 +96,6 @@
             callback();
           }
         };
-        //手机号验证
-        var validatePass2=(rule, value, callback) =>{
-          if (value.length>12||value.length<1){
-            callback(new Error('手机号为11位，sb'));
-          }
-          callback();
-        };
         return {
           rec:true,showPsQualify:false,dialogVisible:false,dialogVisible2:false,sub:false,
           //职称集合
@@ -143,8 +136,7 @@
             ],
             //手机号
             mobileNumber:[
-              {required:true, message:'请输入手机号',trigger: ['change','blur']},
-              {  validator: validatePass2 ,trigger:['change','blur']}
+              {required:true, pattern:/^((1[3-8][0-9])+\d{8})$/,message:'请输入手机号',trigger:'change'}
             ],
             //邮箱
             eMail: [
